@@ -1,0 +1,10 @@
+version: '2'
+services:
+        tvheadend:
+                image: kfir/rpi-tvheadend:nightly
+                command: tvheadend
+                ports:
+                        - 9981:9981
+                        - 9982:9982
+                volumes:
+                        - ./config:/root/.hts/tvheadend/
