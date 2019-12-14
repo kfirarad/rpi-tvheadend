@@ -1,4 +1,4 @@
-FROM resin/rpi-raspbian
+FROM balenalib/raspberry-pi-alpine
 
 RUN apt update \
 	&& apt install git
@@ -16,7 +16,6 @@ WORKDIR tvheadend
 
 ENV AUTOBUILD_CONFIGURE_EXTRA --disable-ffmpeg_static
 
-#RUN ./Autobuild.sh
 RUN ./configure --disable-ffmpeg_static --disable-dvbscan
 RUN make
 RUN make install
