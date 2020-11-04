@@ -1,7 +1,8 @@
 version: '2'
 services:
         tvheadend:
-                image: kfir/rpi-tvheadend:nightly
+                #image: kfir/rpi-tvheadend:nightly
+                build: .        
                 command: tvheadend
                 ports:
                         - 9981:9981
